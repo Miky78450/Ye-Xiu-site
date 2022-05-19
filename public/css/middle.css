@@ -1,0 +1,113 @@
+.middle {
+    width: 100%;
+    position: relative;
+}
+.middle__texture {
+    height: 100%;
+    width: 100%;
+    background: rgb(5,1,52);
+    position: absolute;
+    top: 0;left: 0;
+}
+
+.tournois {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed white;
+}
+
+h1 span {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 150px;
+    margin: 40px 0;
+}
+
+.card-wrapper {
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+    color: white;
+    font-weight: bold;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+    background: #ed5d34/*Visuel tourois https://www.youtube.com/watch?v=ursf79ZAI8c&ab_channel=LeDesignerduWeb*/;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-front p {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.card-front .fas {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+p.card-price {
+    padding: 0px;
+    margin: 0px;
+    font-size: 30px;
+}
+
+.card-back {
+    background: #ed5d34/*Visuel tourois https://www.youtube.com/watch?v=ursf79ZAI8c&ab_channel=LeDesignerduWeb*/;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back a { /*Modification du Bouton*/
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+}
+
+.card-back a:hover{
+    background-color: #1a2f42;
+    color: #fff;
+}
